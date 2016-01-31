@@ -1,5 +1,6 @@
 //unit 5, page 44
 //project: number4
+//author: cytangjoseph
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
