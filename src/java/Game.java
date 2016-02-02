@@ -1,5 +1,5 @@
-//unit 5, page 44
-//project: number4
+//unit 5, page 49
+//project: number5
 //author: cytangjoseph
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
@@ -28,22 +28,22 @@ public class Game implements Serializable {
         guess = null;
         trials = 0;
         message = null;
-        return "play";
+        return "play?faces-redirect=true";
     }
     public String doGuess(){
         trials++;
         if (guess > number) {
             message = "Your guess, " + guess +
                       ", is higher than my number";
-            return null;
+            return "play?faces-redirect=true";
         } else if (guess < number) {
             message = "Your guess, " + guess +
                       ", is lower than my number";
-            return null;
+            return "play?faces-redirect=true";
         } else {
             message = "Congratulations! Your guess," + guess +
                       ", is my number";
-            return "success";
+            return "success?faces-redirect=true";
         
         }
     }
