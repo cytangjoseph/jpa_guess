@@ -6,7 +6,7 @@
       
   <ui:composition template="layout.xhtml">
       <ui:define name="content">
-          <h:panelGroup layout="block" id="feedback"  >
+          <h:panelGroup layout="block" id="feedback">
             <p>#{game.message}</p>
             <p>You have made #{game.trials} guesses.</p>
           </h:panelGroup>
@@ -23,7 +23,7 @@
             <h:message for="guess" class="error" />
             <br />
             <h:commandButton value="Guess" action="#{game.doGuess()}">
-              <f:ajax execute="@form" render="@form: feedback" />
+              <f:ajax execute="@form" render="@form :feedback" />
             </h:commandButton>
         </h:form>
       </ui:define>
