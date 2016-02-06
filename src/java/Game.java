@@ -1,8 +1,10 @@
-//unit 5, page 59
-//project: number7
+//unit 5, page 64-65
+//project: number8
 //author: cytangjoseph
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.context.PartialViewContext;
 import javax.inject.Named;
 
 @Named
@@ -32,14 +34,15 @@ public class Game implements Serializable {
     }
     public String doGuess(){
         trials++;
+        PartialViewContext pvc= FacesContext.getCurrentInstance().getPartialViewContext();
         if (guess > number) {
             message = "Your guess, " + guess +
-                      ", is higher than my number";
-            return "play?faces-redirect=true";
+                      ", is higher than my number.";
+            return pvc.isAjaxRequest() ? null: "play?faces-redirect=true";
         } else if (guess < number) {
             message = "Your guess, " + guess +
                       ", is lower than my number";
-            return "play?faces-redirect=true";
+            return pvc.isAjaxRequest() ? null: "play?faces-redirect=true";
         } else {
             message = "Congratulations! Your guess," + guess +
                       ", is my number";
