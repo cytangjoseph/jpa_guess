@@ -6,9 +6,10 @@
       
   <ui:composition template="layout.xhtml">
       <ui:define name="content">
-        <p>#{game.message}</p>
-        <p>You have made #{game.trials} guesses.</p>
-        
+          <h:panelGroup layout="block" id="feedback"  >
+            <p>#{game.message}</p>
+            <p>You have made #{game.trials} guesses.</p>
+          </h:panelGroup>
         <h:form>
             <h:outputLabel for="guess">
                 Enter a number between 1 to 100:
@@ -21,7 +22,9 @@
             </h:inputText>
             <h:message for="guess" class="error" />
             <br />
-            <h:commandButton value="Guess" action="#{game.doGuess()}" />
+            <h:commandButton value="Guess" action="#{game.doGuess()}">
+              <f:ajax execute="@form" render="@form: feedback" />
+            </h:commandButton>
         </h:form>
       </ui:define>
   </ui:composition>
