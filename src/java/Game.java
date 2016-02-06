@@ -1,5 +1,5 @@
-//unit 5, page 52~55
-//project: number6
+//unit 5, page 59
+//project: number7
 //author: cytangjoseph
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
