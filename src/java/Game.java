@@ -1,6 +1,8 @@
 //unit 5, page 44
 //project: number4
 //author: cytangjoseph
+// dynamic navigation
+
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
@@ -35,7 +37,7 @@ public class Game implements Serializable {
         if (guess > number) {
             message = "Your guess, " + guess +
                       ", is higher than my number";
-            return null;
+            return null;// back to originating page
         } else if (guess < number) {
             message = "Your guess, " + guess +
                       ", is lower than my number";
@@ -43,7 +45,7 @@ public class Game implements Serializable {
         } else {
             message = "Congratulations! Your guess," + guess +
                       ", is my number";
-            return "success";
+            return "success";//to success page
         
         }
     }
