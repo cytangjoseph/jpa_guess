@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
+      xmlns:h="http://xmlns.jcp.org/jsf/html">//tag namespace
+    <h:head>//HTML components of JSF
         <title>Guess the number</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
@@ -12,7 +12,7 @@
         equal to my number.
         </p>
         <h:form>
-        <h:commandButton action="#{game.newGame()}" value="Play the game"/>
+        <h:commandButton action="#{game.newGame()}" value="Play the game"/>//EL expressions #{java.method}
         </h:form>
     </h:body>
 </html>
