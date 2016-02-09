@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<!-- tag libraries -->
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">//tag libraries
-    <h:head>//HTML components of Facelets. Render the HTML head tags
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <!-- HTML components of Facelets. Render the HTML head tags -->      
+    <h:head>
         <title>Guess the number</title>
     </h:head>
     <h:body>
@@ -11,7 +13,8 @@
         equal to my number.
         </p>
         <h:form>
-        <h:commandButton action="#{game.newGame()}" value="Play the game"/>//EL expressions #{java.method}
+        <!-- EL expressions in the form #{java.method} -->        
+        <h:commandButton action="#{game.newGame()}" value="Play the game"/>
         </h:form>
     </h:body>
 </html>
