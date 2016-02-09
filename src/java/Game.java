@@ -1,6 +1,8 @@
 //unit 5, page 49
 //project: number5
 //author: cytangjoseph
+//demo page redirection
+
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
