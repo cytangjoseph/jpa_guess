@@ -1,9 +1,11 @@
 //unit 5, p 38
 //project: number 3
 //author: cytangjoseph
-import java.io.Serializable;
+//using facelets in JSF
+
+import javax.inject.Named; // CDI bean
 import javax.enterprise.context.SessionScoped;
-import javax.inject.Named;
+import java.io.Serializable;
 
 @Named
 @SessionScoped
