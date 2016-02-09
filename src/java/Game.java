@@ -4,10 +4,10 @@
 //using facelets in JSF
 
 import javax.inject.Named; // CDI bean
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.SessionScoped;//data in the bean instance are specific to a user session
 import java.io.Serializable;
 
-@Named
+@Named//CDI annotation
 @SessionScoped
 public class Game implements Serializable {
     private int number=33;
