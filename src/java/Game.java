@@ -3,9 +3,9 @@
 //author: cytangjoseph
 //demo page redirection
 
-import java.io.Serializable;
-import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+import java.io.Serializable;
 
 @Named
 @SessionScoped
